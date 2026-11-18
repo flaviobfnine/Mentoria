@@ -4,12 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PREMIER BRAND SPORTS — A Liga das Grandes Marcas Esportivas</title>
+    <meta name="description" content="Mentoria Premier Brand Sports com Flávio Bfnine. Descubra o método para eliminar ociosidade, blindar margem e fazer sua confecção esportiva faturar R$ +60 mil por mês.">
     
-    <!-- Google Fonts -->
+    <!-- Preconnect Domínios Críticos -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
-    
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preconnect" href="https://player.vimeo.com" crossorigin>
+
+    <!-- Preload Imagens Críticas da Primeira Dobra (LCP Turbo) -->
+    <link rel="preload" as="image" href="assets/logo_premier.png" type="image/png" fetchpriority="high">
+    <link rel="preload" as="image" href="assets/flavio_mentor_bio.webp" type="image/webp" fetchpriority="high">
+
+    <!-- Google Fonts Assíncrono (Não Bloqueia Renderização) -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@600;700;800;900&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@600;700;800;900&display=swap" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@600;700;800;900&display=swap">
+    </noscript>
+
+    <!-- FontAwesome Icons Assíncrono -->
+    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </noscript>
+
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -54,9 +74,6 @@
         }
     </script>
 
-    <!-- FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
     <style>
         .glow-emerald {
             box-shadow: 0 0 50px -10px rgba(16, 185, 129, 0.3);
@@ -86,76 +103,149 @@
 </head>
 <body class="bg-onyx-950 text-cream-100 font-sans antialiased selection:bg-emerald-500 selection:text-onyx-950">
 
-    <!-- CABEÇALHO / LOGO PREMIER BRAND SPORTS (DESKTOP: ESQUERDA | MOBILE: CENTRO TOPO AUMENTADA +30%) -->
-    <header class="absolute top-0 inset-x-0 z-30 py-4 px-4 sm:px-6 lg:px-8 pointer-events-none">
-        <div class="max-w-7xl mx-auto flex items-center justify-center lg:justify-start">
-            <a href="#" class="pointer-events-auto block transition-transform duration-300 hover:scale-105">
-                <img src="assets/logo_premier.png" alt="Premier Brand Sports Logo" class="h-[135px] sm:h-[150px] lg:h-[165px] w-auto object-contain drop-shadow-[0_12px_30px_rgba(0,0,0,0.95)]">
+    <!-- CABEÇALHO / LOGO PREMIER BRAND SPORTS (MOBILE: CENTRALIZADO | DESKTOP: ESQUERDA) -->
+    <header class="relative z-30 pt-6 pb-2 sm:pt-8 sm:pb-4 px-4 sm:px-6 lg:px-8 bg-onyx-950">
+        <div class="max-w-[1400px] mx-auto flex items-center justify-center lg:justify-start">
+            <a href="#" class="block transition-transform duration-300 hover:scale-105">
+                <img src="assets/logo_premier.png" alt="Premier Brand Sports Logo" class="h-[90px] sm:h-[110px] lg:h-[125px] w-auto object-contain drop-shadow-[0_12px_30px_rgba(0,0,0,0.95)]">
             </a>
         </div>
     </header>
 
-    <!-- HERO SECTION (RESPONSIVA: MOBILE PORTRAIT COM NOVAS CAMISAS BFNINE / DESKTOP LANDSCAPE À DIREITA) -->
-    <section class="relative min-h-screen flex flex-col justify-center pt-8 pb-16 lg:pt-44 lg:pb-28 overflow-hidden bg-onyx-950">
-        
-        <!-- VISUAL MOBILE (FUNDO PORTRAIT COM ROSTO, OMBROS E PEITO DO ESPECIALISTA TOTALMENTE VISÍVEIS) -->
-        <div class="block lg:hidden absolute inset-x-0 top-0 h-[520px] z-0 pointer-events-none">
-            <img src="assets/hero_bg_mobile_oficial.webp?v=6" alt="Flávio Bfnine — Mentoria Premier Brand Sports" class="w-full h-full object-cover object-top brightness-110">
-            <!-- Degradê suave posicionado apenas na base para conectar com o fundo preto sem tampar o peito e ombros -->
-            <div class="absolute inset-x-0 bottom-0 h-36 bg-gradient-to-t from-onyx-950 via-onyx-950/80 to-transparent"></div>
-        </div>
+    <!-- HERO SECTION (2 COLUNAS EXPANSIVAS: TEXTO À ESQUERDA | VSL GIGANTE +35% À DIREITA) -->
+    <section class="relative pt-4 pb-16 lg:pt-8 lg:pb-24 overflow-hidden bg-onyx-950">
+        <!-- Glows de Fundo Sutis -->
+        <div class="absolute top-1/4 left-10 w-[500px] h-[300px] bg-emerald-500/10 blur-[130px] rounded-full pointer-events-none"></div>
+        <div class="absolute top-1/3 right-10 w-[600px] h-[380px] bg-gold-500/10 blur-[140px] rounded-full pointer-events-none"></div>
 
-        <!-- VISUAL DESKTOP (ESPECIALISTA LIMPO - FOTO JÁ POSSUI DEGRADÊ NATURAL À ESQUERDA) -->
-        <div class="hidden lg:block absolute inset-y-0 right-0 w-9/12 z-0 pointer-events-none overflow-hidden">
-            <img src="assets/hero_bg_especialista_novo.webp" alt="Flávio — Especialista Premier Brand Sports" class="w-full h-full object-cover object-center brightness-105">
-            <!-- Suave transição apenas no rodapé para conectar com a próxima seção -->
-            <div class="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-onyx-950 to-transparent"></div>
-        </div>
+        <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
+                
+                <!-- COLUNA ESQUERDA: COPY + BULLETS + CTA NO DESKTOP -->
+                <div class="lg:col-span-5 text-center lg:text-left">
+                    <!-- Tag de Exclusividade e Escassez -->
+                    <div class="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-emerald-950/80 border border-emerald-500/40 text-emerald-300 text-xs font-bold uppercase tracking-wider mb-7 backdrop-blur-md shadow-lg">
+                        <i class="fa-solid fa-circle text-[8px] text-emerald-400 animate-pulse"></i>
+                        <span>Mentoria para Fabricantes Esportivos • Seleção por Análise de Perfil</span>
+                    </div>
 
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full pt-[370px] sm:pt-[400px] lg:pt-0">
-            <div class="max-w-2xl text-center lg:text-left">
-                <!-- Tag de Exclusividade e Escassez (Sobrancelha Ajustada com Respiro) -->
-                <div class="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-emerald-950/80 border border-emerald-500/40 text-emerald-300 text-xs font-bold uppercase tracking-wider mb-6 lg:mt-12 backdrop-blur-md shadow-lg">
-                    <i class="fa-solid fa-circle text-[8px] text-emerald-400 animate-pulse"></i>
-                    <span>Mentoria para Fabricantes Esportivos • Seleção por Análise de Perfil</span>
+                    <!-- Headline Principal (Com Respiro Superior e Inferior) -->
+                    <h1 class="font-heading font-extrabold text-3xl sm:text-4xl lg:text-[42px] xl:text-[46px] text-cream-50 leading-[1.2] mb-8 tracking-tight drop-shadow-2xl">
+                        Deixe de ser <span class="text-gradient-gold">escravo da operação</span> e faça sua confecção faturar <span class="text-gradient-emerald">R$ +60 MIL por mês</span>.
+                    </h1>
+
+                    <!-- Subheadline em Bullet Points (Com Amplo Respiro) -->
+                    <ul class="space-y-4 mb-8 sm:mb-10 text-left max-w-xl mx-auto lg:mx-0">
+                        <li class="flex items-start space-x-3.5">
+                            <div class="w-6 h-6 rounded-full bg-emerald-500/20 border border-emerald-500/40 flex items-center justify-center text-emerald-400 text-xs shrink-0 mt-0.5">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <span class="text-sm sm:text-base text-cream-100 font-medium leading-relaxed">
+                                <strong class="text-cream-50 font-bold">Elimine até 95%</strong> da ociosidade e desperdício na fábrica.
+                            </span>
+                        </li>
+                        <li class="flex items-start space-x-3.5">
+                            <div class="w-6 h-6 rounded-full bg-emerald-500/20 border border-emerald-500/40 flex items-center justify-center text-emerald-400 text-xs shrink-0 mt-0.5">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <span class="text-sm sm:text-base text-cream-100 font-medium leading-relaxed">
+                                <strong class="text-cream-50 font-bold">Aumente seu ticket médio</strong> com estratégias simples de esteira.
+                            </span>
+                        </li>
+                        <li class="flex items-start space-x-3.5">
+                            <div class="w-6 h-6 rounded-full bg-emerald-500/20 border border-emerald-500/40 flex items-center justify-center text-emerald-400 text-xs shrink-0 mt-0.5">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <span class="text-sm sm:text-base text-cream-100 font-medium leading-relaxed">
+                                <strong class="text-cream-50 font-bold">Crie um canal de vendas</strong> que gere de 15 a 30 vendas por semana.
+                            </span>
+                        </li>
+                    </ul>
+
+                    <!-- Botão CTA Hero (Exclusivo na Coluna Esquerda no DESKTOP) -->
+                    <div class="hidden lg:block pt-2 mb-6">
+                        <a href="#selecao" class="inline-flex items-center justify-center space-x-3 w-full bg-gradient-to-r from-emerald-500 via-emerald-400 to-gold-500 hover:brightness-110 text-onyx-950 font-extrabold px-8 py-5 rounded-2xl text-base xl:text-lg transition-all duration-300 transform hover:-translate-y-1 shadow-2xl glow-emerald text-center">
+                            <i class="fa-solid fa-trophy text-lg"></i>
+                            <span>QUERO PREENCHER FORMULÁRIO PARA TENTAR UMA VAGA</span>
+                        </a>
+                        <p class="text-xs text-cream-300/60 mt-3.5 flex items-center justify-start space-x-2">
+                            <i class="fa-solid fa-lock text-emerald-400 shrink-0"></i>
+                            <span>Admissão restrita • Avaliação individual do perfil da sua confecção</span>
+                        </p>
+                    </div>
                 </div>
 
-                <!-- Headline Principal -->
-                <h1 class="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl text-cream-50 leading-[1.15] mb-6 tracking-tight drop-shadow-2xl">
-                    Deixe de ser <span class="text-gradient-gold">escravo da operação</span> e faça sua confecção faturar <span class="text-gradient-emerald">R$ +60 MIL por mês</span>.
-                </h1>
+                <!-- COLUNA DIREITA: O VÍDEO VSL DA MENTORIA (AMPLIADO +40% NO DESKTOP | LOGO ABAIXO DA SUBHEAD NO MOBILE) -->
+                <div class="lg:col-span-7">
+                    <div class="p-2 sm:p-4 rounded-3xl bg-onyx-900/95 border border-emerald-500/40 glow-emerald shadow-2xl backdrop-blur-xl">
+                        <!-- Aspect Ratio 16:9 do Vídeo com Carregamento Inteligente (Capa Super Leve + Vimeo com Autoplay) -->
+                        <div id="vslPlayerContainer" class="relative w-full aspect-video rounded-2xl overflow-hidden bg-onyx-950 border border-emerald-800/40 shadow-inner">
+                            <!-- Capa Super Leve (Apenas 64kb) com Botão Play -->
+                            <div id="vslFacade" onclick="playVslVideo()" class="absolute inset-0 cursor-pointer group z-10">
+                                <!-- Imagem de Capa do Vídeo -->
+                                <img src="assets/flavio_mentor_bio.webp" alt="Flávio Bfnine Vídeo de Vendas" class="w-full h-full object-cover object-top opacity-70 group-hover:scale-105 group-hover:opacity-85 transition-all duration-700">
+                                
+                                <!-- Overlay com Gradiente Escuro -->
+                                <div class="absolute inset-0 bg-gradient-to-t from-onyx-950 via-onyx-950/40 to-transparent"></div>
 
-                <!-- Subheadline -->
-                <p class="text-base sm:text-lg text-cream-200/90 mb-8 leading-relaxed font-normal drop-shadow">
-                    Implementando o MECANISMO de fabricação esportiva com análise de dados para eliminar ociosidade, desperdícios, criar uma esteira de produtos diferenciados para aumentar seu ticket médio com estratégias de Order Bump, UpSell e LTV para estruturar e criar um funil de vendas multicanal — <strong class="text-cream-50 font-semibold">para ter margem protegida e recuperar seu tempo livre com a família.</strong>
-                </p>
+                                <!-- Botão Play Central Pulsante -->
+                                <div class="absolute inset-0 flex flex-col items-center justify-center text-center p-4">
+                                    <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-gradient-to-r from-emerald-500 to-gold-500 text-onyx-950 flex items-center justify-center shadow-[0_0_40px_rgba(16,185,129,0.75)] group-hover:scale-110 transition-transform duration-300 mb-3 pl-1">
+                                        <i class="fa-solid fa-play text-2xl sm:text-3xl text-onyx-950"></i>
+                                    </div>
+                                    <span class="text-xs sm:text-sm font-bold uppercase tracking-widest text-cream-50 bg-onyx-950/90 px-4 py-1.5 rounded-full border border-emerald-500/50 backdrop-blur-md">
+                                        Clique para dar o Play
+                                    </span>
+                                </div>
 
-                <!-- Botão CTA Hero (Opção 1: Inversão de Papéis / Formulário) -->
-                <div class="mb-8">
-                    <a href="#selecao" class="inline-flex items-center justify-center space-x-3 w-full sm:w-auto bg-gradient-to-r from-emerald-500 via-emerald-400 to-gold-500 hover:brightness-110 text-onyx-950 font-extrabold px-9 py-5 rounded-2xl text-base sm:text-lg transition-all duration-300 transform hover:-translate-y-1 shadow-2xl glow-emerald text-center">
-                        <i class="fa-solid fa-trophy text-lg"></i>
-                        <span>QUERO PREENCHER FORMULÁRIO PARA TENTAR UMA VAGA NA MENTORIA</span>
-                    </a>
-                    <p class="text-xs text-cream-300/60 mt-3 flex items-center justify-center lg:justify-start space-x-2">
-                        <i class="fa-solid fa-lock text-emerald-400 shrink-0"></i>
-                        <span>Admissão restrita • Você precisará justificar no formulário por que sua confecção deve ser selecionada pelo Flávio</span>
+                                <!-- Barra Inferior do Player Video -->
+                                <div class="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 flex items-center justify-between text-xs text-cream-200/90 bg-onyx-900/80 px-3.5 py-2 rounded-xl backdrop-blur-md border border-emerald-800/40">
+                                    <div class="flex items-center space-x-2">
+                                        <i class="fa-solid fa-shield-halved text-emerald-400"></i>
+                                        <span class="font-semibold text-cream-50">Mensagem Oficial de Admissão</span>
+                                    </div>
+                                    <span class="hidden sm:inline text-cream-300/70">Flávio Bfnine • Mentor</span>
+                                </div>
+                            </div>
+
+                            <!-- Onde o Iframe do Vimeo entra instantaneamente após o clique -->
+                            <div id="vslIframeWrapper" class="w-full h-full"></div>
+                        </div>
+                    </div>
+
+                    <p class="text-center text-xs text-cream-300/60 mt-3 flex items-center justify-center space-x-2">
+                        <i class="fa-solid fa-lock text-emerald-400"></i>
+                        <span>Vídeo oficial de apresentação da Premier Brand Sports.</span>
                     </p>
+
+                    <!-- Botão CTA Hero (Exclusivo no MOBILE: Exibido logo abaixo do Vídeo) -->
+                    <div class="block lg:hidden mt-8 text-center">
+                        <a href="#selecao" class="inline-flex items-center justify-center space-x-3 w-full bg-gradient-to-r from-emerald-500 via-emerald-400 to-gold-500 hover:brightness-110 text-onyx-950 font-extrabold px-6 py-4 sm:px-8 sm:py-5 rounded-2xl text-base sm:text-lg transition-all duration-300 transform hover:-translate-y-1 shadow-2xl glow-emerald text-center">
+                            <i class="fa-solid fa-trophy text-lg"></i>
+                            <span>QUERO PREENCHER FORMULÁRIO PARA TENTAR UMA VAGA</span>
+                        </a>
+                        <p class="text-xs text-cream-300/60 mt-3 flex items-center justify-center space-x-2">
+                            <i class="fa-solid fa-lock text-emerald-400 shrink-0"></i>
+                            <span>Admissão restrita • Avaliação individual do perfil da sua confecção</span>
+                        </p>
+                    </div>
                 </div>
 
-                <!-- Destaques Industriais (Pílulas Lado a Lado Abaixo do CTA) -->
-                <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-6 border-t border-emerald-900/40">
-                    <div class="p-3.5 rounded-xl bg-onyx-900/90 border border-emerald-800/50 flex items-start space-x-2.5 backdrop-blur-sm">
-                        <i class="fa-solid fa-industry text-emerald-400 text-sm mt-0.5 shrink-0"></i>
-                        <span class="text-xs text-cream-200 leading-snug"><strong class="text-cream-50 font-bold block">Engenharia Fabril:</strong> Operação enxuta que elimina prejuízos e roda sem você no chão de fábrica.</span>
-                    </div>
-                    <div class="p-3.5 rounded-xl bg-onyx-900/90 border border-gold-800/40 flex items-start space-x-2.5 backdrop-blur-sm">
-                        <i class="fa-solid fa-layer-group text-gold-400 text-sm mt-0.5 shrink-0"></i>
-                        <span class="text-xs text-cream-200 leading-snug"><strong class="text-cream-50 font-bold block">Maximização de Lucro:</strong> Combos e ofertas estratégicas para faturar mais por contrato sem dar desconto.</span>
-                    </div>
-                    <div class="p-3.5 rounded-xl bg-onyx-900/90 border border-emerald-800/50 flex items-start space-x-2.5 backdrop-blur-sm">
-                        <i class="fa-solid fa-chart-line text-emerald-400 text-sm mt-0.5 shrink-0"></i>
-                        <span class="text-xs text-cream-200 leading-snug"><strong class="text-cream-50 font-bold block">Escala Multicanal:</strong> Máquina de vendas ativa atraindo compradores qualificados todos os dias.</span>
-                    </div>
+            </div>
+
+            <!-- Destaques Industriais (Pílulas Abaixo do Grid) -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-8 mt-12 border-t border-emerald-900/40">
+                <div class="p-3.5 rounded-xl bg-onyx-900/90 border border-emerald-800/50 flex items-start space-x-2.5 backdrop-blur-sm">
+                    <i class="fa-solid fa-industry text-emerald-400 text-sm mt-0.5 shrink-0"></i>
+                    <span class="text-xs text-cream-200 leading-snug"><strong class="text-cream-50 font-bold block">Engenharia Fabril:</strong> Operação enxuta que elimina prejuízos e roda sem você no chão de fábrica.</span>
+                </div>
+                <div class="p-3.5 rounded-xl bg-onyx-900/90 border border-gold-800/40 flex items-start space-x-2.5 backdrop-blur-sm">
+                    <i class="fa-solid fa-layer-group text-gold-400 text-sm mt-0.5 shrink-0"></i>
+                    <span class="text-xs text-cream-200 leading-snug"><strong class="text-cream-50 font-bold block">Maximização de Lucro:</strong> Combos e ofertas estratégicas para faturar mais por contrato sem dar desconto.</span>
+                </div>
+                <div class="p-3.5 rounded-xl bg-onyx-900/90 border border-emerald-800/50 flex items-start space-x-2.5 backdrop-blur-sm">
+                    <i class="fa-solid fa-chart-line text-emerald-400 text-sm mt-0.5 shrink-0"></i>
+                    <span class="text-xs text-cream-200 leading-snug"><strong class="text-cream-50 font-bold block">Escala Multicanal:</strong> Máquina de vendas ativa atraindo compradores qualificados todos os dias.</span>
                 </div>
             </div>
         </div>
@@ -165,7 +255,7 @@
     <section class="relative min-h-screen flex flex-col justify-center py-20 bg-onyx-900 border-y border-emerald-900/40">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="text-3xl sm:text-4xl font-heading font-extrabold text-cream-50">Fabricantes como você que aplicaram o MECANISMO e viraram o jogo</h2>
+                <h2 class="text-3xl sm:text-4xl font-heading font-extrabold text-cream-50">Resultados Reais dos Nossos Fabricantes</h2>
                 <p class="text-cream-300/70 mt-3 text-sm">Donos de confecção que saíram do operacional, eliminaram ociosidade e hoje aumentaram seus faturamentos em 3x com operações geridas por mecanismos e equipe, atuando 100% como estrategistas do negócio.</p>
             </div>
 
@@ -178,7 +268,7 @@
                             <div class="relative bg-slate-900 p-2 rounded-t-xl border border-slate-700/80 shadow-2xl group-hover:border-emerald-500/50 transition-all duration-300">
                                 <div class="w-2 h-2 bg-slate-600 rounded-full mx-auto mb-1.5"></div>
                                 <div class="relative pt-[56.25%] w-full bg-black rounded-lg overflow-hidden border border-slate-900">
-                                    <img src="https://img.youtube.com/vi/w7Brm6d6TQo/hqdefault.jpg" alt="Depoimento Peleco Sportis" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-90 group-hover:opacity-100">
+                                    <img src="https://img.youtube.com/vi/w7Brm6d6TQo/hqdefault.jpg" alt="Depoimento Peleco Sportis" loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-90 group-hover:opacity-100">
                                     <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors flex items-center justify-center">
                                         <div class="w-14 h-10 bg-red-600 group-hover:bg-red-500 text-white rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-all duration-300 border border-white/20">
                                             <i class="fa-solid fa-play text-lg ml-0.5"></i>
@@ -196,7 +286,7 @@
                             <div class="relative border-[6px] border-slate-800 bg-slate-950 rounded-[1.8rem] shadow-xl overflow-hidden border-t-[10px] group-hover:border-emerald-500/50 transition-all duration-300">
                                 <div class="w-12 h-1 bg-slate-700 rounded-full mx-auto my-1"></div>
                                 <div class="relative pt-[56.25%] w-full bg-black overflow-hidden">
-                                    <img src="https://img.youtube.com/vi/w7Brm6d6TQo/hqdefault.jpg" alt="Depoimento Peleco Sportis" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-90 group-hover:opacity-100">
+                                    <img src="https://img.youtube.com/vi/w7Brm6d6TQo/hqdefault.jpg" alt="Depoimento Peleco Sportis" loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-90 group-hover:opacity-100">
                                     <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors flex items-center justify-center">
                                         <div class="w-12 h-8 bg-red-600 group-hover:bg-red-500 text-white rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-all duration-300 border border-white/20">
                                             <i class="fa-solid fa-play text-sm ml-0.5"></i>
@@ -226,7 +316,7 @@
                             <div class="relative bg-slate-900 p-2 rounded-t-xl border border-slate-700/80 shadow-2xl group-hover:border-gold-500/50 transition-all duration-300">
                                 <div class="w-2 h-2 bg-slate-600 rounded-full mx-auto mb-1.5"></div>
                                 <div class="relative pt-[56.25%] w-full bg-black rounded-lg overflow-hidden border border-slate-900">
-                                    <img src="https://img.youtube.com/vi/1geRPSfHvXI/hqdefault.jpg" alt="Depoimento Escolinha de Futebol" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-90 group-hover:opacity-100">
+                                    <img src="https://img.youtube.com/vi/1geRPSfHvXI/hqdefault.jpg" alt="Depoimento Escolinha de Futebol" loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-90 group-hover:opacity-100">
                                     <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors flex items-center justify-center">
                                         <div class="w-14 h-10 bg-red-600 group-hover:bg-red-500 text-white rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-all duration-300 border border-white/20">
                                             <i class="fa-solid fa-play text-lg ml-0.5"></i>
@@ -244,7 +334,7 @@
                             <div class="relative border-[6px] border-slate-800 bg-slate-950 rounded-[1.8rem] shadow-xl overflow-hidden border-t-[10px] group-hover:border-gold-500/50 transition-all duration-300">
                                 <div class="w-12 h-1 bg-slate-700 rounded-full mx-auto my-1"></div>
                                 <div class="relative pt-[56.25%] w-full bg-black overflow-hidden">
-                                    <img src="https://img.youtube.com/vi/1geRPSfHvXI/hqdefault.jpg" alt="Depoimento Escolinha de Futebol" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-90 group-hover:opacity-100">
+                                    <img src="https://img.youtube.com/vi/1geRPSfHvXI/hqdefault.jpg" alt="Depoimento Escolinha de Futebol" loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-90 group-hover:opacity-100">
                                     <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors flex items-center justify-center">
                                         <div class="w-12 h-8 bg-red-600 group-hover:bg-red-500 text-white rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-all duration-300 border border-white/20">
                                             <i class="fa-solid fa-play text-sm ml-0.5"></i>
@@ -274,7 +364,7 @@
                             <div class="relative bg-slate-900 p-2 rounded-t-xl border border-slate-700/80 shadow-2xl group-hover:border-emerald-500/50 transition-all duration-300">
                                 <div class="w-2 h-2 bg-slate-600 rounded-full mx-auto mb-1.5"></div>
                                 <div class="relative pt-[56.25%] w-full bg-black rounded-lg overflow-hidden border border-slate-900">
-                                    <img src="https://img.youtube.com/vi/L5h9yOEyNhM/hqdefault.jpg" alt="Depoimento Cria Formatos" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-90 group-hover:opacity-100">
+                                    <img src="https://img.youtube.com/vi/L5h9yOEyNhM/hqdefault.jpg" alt="Depoimento Cria Formatos" loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-90 group-hover:opacity-100">
                                     <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors flex items-center justify-center">
                                         <div class="w-14 h-10 bg-red-600 group-hover:bg-red-500 text-white rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-all duration-300 border border-white/20">
                                             <i class="fa-solid fa-play text-lg ml-0.5"></i>
@@ -292,7 +382,7 @@
                             <div class="relative border-[6px] border-slate-800 bg-slate-950 rounded-[1.8rem] shadow-xl overflow-hidden border-t-[10px] group-hover:border-emerald-500/50 transition-all duration-300">
                                 <div class="w-12 h-1 bg-slate-700 rounded-full mx-auto my-1"></div>
                                 <div class="relative pt-[56.25%] w-full bg-black overflow-hidden">
-                                    <img src="https://img.youtube.com/vi/L5h9yOEyNhM/hqdefault.jpg" alt="Depoimento Cria Formatos" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-90 group-hover:opacity-100">
+                                    <img src="https://img.youtube.com/vi/L5h9yOEyNhM/hqdefault.jpg" alt="Depoimento Cria Formatos" loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-90 group-hover:opacity-100">
                                     <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors flex items-center justify-center">
                                         <div class="w-12 h-8 bg-red-600 group-hover:bg-red-500 text-white rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-all duration-300 border border-white/20">
                                             <i class="fa-solid fa-play text-sm ml-0.5"></i>
@@ -312,83 +402,6 @@
                         <span><i class="fa-solid fa-check-double mr-1"></i>Engenharia de Esteira</span>
                         <span class="text-emerald-400">Verificado</span>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SEÇÃO VSL (VÍDEO DE VENDAS DE 7 A 10 MINUTOS DO MENTOR FLÁVIO BFNINE) -->
-    <section id="vsl" class="relative min-h-screen flex flex-col justify-center py-16 sm:py-20 bg-onyx-950 border-t border-emerald-900/40 overflow-hidden">
-        <!-- Glows de Fundo -->
-        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-emerald-500/10 blur-[120px] rounded-full pointer-events-none"></div>
-        <div class="absolute top-1/3 right-1/4 w-[300px] h-[200px] bg-gold-500/10 blur-[90px] rounded-full pointer-events-none"></div>
-
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <!-- Cabeçalho da Seção VSL -->
-            <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
-                <div class="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-emerald-950/90 border border-emerald-500/50 text-emerald-300 text-xs font-bold uppercase tracking-wider mb-4 shadow-lg backdrop-blur-md">
-                    <i class="fa-solid fa-circle-play text-emerald-400 animate-pulse"></i>
-                    <span>VÍDEO OBRIGATÓRIO ANTES DO FORMULÁRIO</span>
-                </div>
-                <h2 class="text-2xl sm:text-4xl font-heading font-extrabold text-cream-50 leading-tight">
-                    Assista a estes 7 minutos do <span class="text-gradient-gold">Flávio Bfnine</span> e descubra como aplicar o MECANISMO para sair da operação e faturar R$ +60 MIL por mês
-                </h2>
-                <p class="text-sm sm:text-base text-cream-200/80 mt-3 leading-relaxed">
-                    Veja a explicação prática de como eliminar a ociosidade da sua fábrica, dobrar o ticket médio com esteira de produtos e estruturar seu funil de vendas multicanal — <strong class="text-cream-50">para ter margem protegida e recuperar seu tempo com a família.</strong>
-                </p>
-            </div>
-
-            <!-- Moldura / Container do Player VSL com Efeito High-Ticket -->
-            <div class="relative max-w-4xl mx-auto">
-                <div class="p-2 sm:p-4 rounded-3xl bg-onyx-900/90 border border-emerald-500/40 glow-emerald shadow-2xl backdrop-blur-xl">
-
-                    <!-- Aspect Ratio 16:9 do Vídeo com Carregamento Inteligente (Capa Super Leve + Vimeo com Autoplay) -->
-                    <div id="vslPlayerContainer" class="relative w-full aspect-video rounded-2xl overflow-hidden bg-onyx-950 border border-emerald-800/40 shadow-inner">
-                        <!-- Capa Super Leve (Apenas 64kb) com Botão Play -->
-                        <div id="vslFacade" onclick="playVslVideo()" class="absolute inset-0 cursor-pointer group z-10">
-                            <!-- Imagem de Capa do Vídeo -->
-                            <img src="assets/flavio_mentor_bio.webp" alt="Flávio Bfnine Vídeo de Vendas" class="w-full h-full object-cover object-top opacity-70 group-hover:scale-105 group-hover:opacity-85 transition-all duration-700">
-                            
-                            <!-- Overlay com Gradiente Escuro -->
-                            <div class="absolute inset-0 bg-gradient-to-t from-onyx-950 via-onyx-950/40 to-transparent"></div>
-
-                            <!-- Botão Play Central Pulsante -->
-                            <div class="absolute inset-0 flex flex-col items-center justify-center text-center p-4">
-                                <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-gradient-to-r from-emerald-500 to-gold-500 text-onyx-950 flex items-center justify-center shadow-[0_0_40px_rgba(16,185,129,0.7)] group-hover:scale-110 transition-transform duration-300 mb-4 pl-1">
-                                    <i class="fa-solid fa-play text-2xl sm:text-3xl text-onyx-950"></i>
-                                </div>
-                                <span class="text-xs sm:text-sm font-bold uppercase tracking-widest text-cream-50 bg-onyx-950/90 px-4 py-1.5 rounded-full border border-emerald-500/50 backdrop-blur-md">
-                                    Clique para dar o Play
-                                </span>
-                            </div>
-
-                            <!-- Barra Inferior do Player Video -->
-                            <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between text-xs text-cream-200/90 bg-onyx-900/80 px-4 py-2 rounded-xl backdrop-blur-md border border-emerald-800/40">
-                                <div class="flex items-center space-x-2">
-                                    <i class="fa-solid fa-shield-halved text-emerald-400"></i>
-                                    <span class="font-semibold text-cream-50">Mensagem Oficial de Admissão</span>
-                                </div>
-                                <span class="hidden sm:inline text-cream-300/70">Flávio Bfnine • Fundador da Premier Brand</span>
-                            </div>
-                        </div>
-
-                        <!-- Onde o Iframe do Vimeo entra instantaneamente após o clique -->
-                        <div id="vslIframeWrapper" class="w-full h-full"></div>
-                    </div>
-                </div>
-
-                <!-- Aviso de Privacidade abaixo do Player -->
-                <p class="text-center text-xs text-cream-300/60 mt-4 flex items-center justify-center space-x-2">
-                    <i class="fa-solid fa-lock text-emerald-400"></i>
-                    <span>Conteúdo exclusivo e confidencial reservado para donos de fábrica e estamparia esportiva.</span>
-                </p>
-
-                <!-- CTA Direto da Seção VSL -->
-                <div class="mt-8 text-center">
-                    <a href="#selecao" class="inline-flex items-center justify-center space-x-3 w-full sm:w-auto bg-gradient-to-r from-emerald-500 via-emerald-400 to-gold-500 hover:brightness-110 text-onyx-950 font-extrabold px-8 py-4 sm:py-5 rounded-2xl text-base sm:text-lg transition-all duration-300 transform hover:-translate-y-1 shadow-2xl glow-emerald text-center">
-                        <i class="fa-solid fa-paper-plane text-lg"></i>
-                        <span>QUERO PREENCHER FORMULÁRIO PARA TENTAR UMA VAGA NA MENTORIA</span>
-                    </a>
                 </div>
             </div>
         </div>
@@ -986,7 +999,7 @@
             <div class="grid grid-cols-1 md:grid-cols-12 gap-10 items-center">
                 <div class="md:col-span-5">
                     <div class="relative rounded-3xl overflow-hidden border-2 border-gold-500/50 shadow-2xl group glow-gold">
-                        <img src="assets/foto_eu.webp" alt="Flávio Bfnine — Mentor Premier Brand Sports" class="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-500">
+                        <img src="assets/foto_eu.webp" alt="Flávio Bfnine — Mentor Premier Brand Sports" loading="lazy" decoding="async" width="500" height="500" class="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-500">
                     </div>
                 </div>
                 <div class="md:col-span-7">
@@ -1039,7 +1052,7 @@
                 <div class="p-3 rounded-2xl bg-onyx-900 border border-emerald-800/50 hover:border-emerald-400 transition-all duration-300 shadow-xl group">
                     <div class="relative overflow-hidden rounded-xl bg-onyx-950 min-h-[320px] flex items-center justify-center border border-emerald-900/40">
                         <!-- IMAGEM DO PRINT REAL -->
-                        <img src="assets/pint_1.png" alt="Print Depoimento Real 1" onerror="if(!this.dataset.retry){this.dataset.retry=true;this.src='assets/print_1.png';}" class="w-full h-auto max-h-[500px] object-contain rounded-xl cursor-pointer group-hover:scale-105 transition-transform duration-300" onclick="openPrintModal(this.src)">
+                        <img src="assets/pint_1.png" alt="Print Depoimento Real 1" loading="lazy" decoding="async" onerror="if(!this.dataset.retry){this.dataset.retry=true;this.src='assets/print_1.png';}" class="w-full h-auto max-h-[500px] object-contain rounded-xl cursor-pointer group-hover:scale-105 transition-transform duration-300" onclick="openPrintModal(this.src)">
                     </div>
                 </div>
 
@@ -1047,7 +1060,7 @@
                 <div class="p-3 rounded-2xl bg-onyx-900 border border-emerald-800/50 hover:border-emerald-400 transition-all duration-300 shadow-xl group">
                     <div class="relative overflow-hidden rounded-xl bg-onyx-950 min-h-[320px] flex items-center justify-center border border-emerald-900/40">
                         <!-- IMAGEM DO PRINT REAL -->
-                        <img src="assets/pint_2.png" alt="Print Depoimento Real 2" onerror="if(!this.dataset.retry){this.dataset.retry=true;this.src='assets/print_2.png';}" class="w-full h-auto max-h-[500px] object-contain rounded-xl cursor-pointer group-hover:scale-105 transition-transform duration-300" onclick="openPrintModal(this.src)">
+                        <img src="assets/pint_2.png" alt="Print Depoimento Real 2" loading="lazy" decoding="async" onerror="if(!this.dataset.retry){this.dataset.retry=true;this.src='assets/print_2.png';}" class="w-full h-auto max-h-[500px] object-contain rounded-xl cursor-pointer group-hover:scale-105 transition-transform duration-300" onclick="openPrintModal(this.src)">
                     </div>
                 </div>
 
@@ -1055,7 +1068,7 @@
                 <div class="p-3 rounded-2xl bg-onyx-900 border border-emerald-800/50 hover:border-emerald-400 transition-all duration-300 shadow-xl group">
                     <div class="relative overflow-hidden rounded-xl bg-onyx-950 min-h-[320px] flex items-center justify-center border border-emerald-900/40">
                         <!-- IMAGEM DO PRINT REAL -->
-                        <img src="assets/pint_3.png" alt="Print Depoimento Real 3" onerror="if(!this.dataset.retry){this.dataset.retry=true;this.src='assets/print_3.png';}" class="w-full h-auto max-h-[500px] object-contain rounded-xl cursor-pointer group-hover:scale-105 transition-transform duration-300" onclick="openPrintModal(this.src)">
+                        <img src="assets/pint_3.png" alt="Print Depoimento Real 3" loading="lazy" decoding="async" onerror="if(!this.dataset.retry){this.dataset.retry=true;this.src='assets/print_3.png';}" class="w-full h-auto max-h-[500px] object-contain rounded-xl cursor-pointer group-hover:scale-105 transition-transform duration-300" onclick="openPrintModal(this.src)">
                     </div>
                 </div>
 
