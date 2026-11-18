@@ -103,29 +103,33 @@
 </head>
 <body class="bg-onyx-950 text-cream-100 font-sans antialiased selection:bg-emerald-500 selection:text-onyx-950">
 
-    <!-- CABEÇALHO / LOGO PREMIER BRAND SPORTS (MOBILE: CENTRALIZADO | DESKTOP: ESQUERDA) -->
-    <header class="relative z-30 pt-6 pb-2 sm:pt-8 sm:pb-4 px-4 sm:px-6 lg:px-8 bg-onyx-950">
-        <div class="max-w-[1400px] mx-auto flex items-center justify-center lg:justify-start">
-            <a href="#" class="block transition-transform duration-300 hover:scale-105">
-                <img src="assets/logo_premier.png" alt="Premier Brand Sports Logo" class="h-[90px] sm:h-[110px] lg:h-[125px] w-auto object-contain drop-shadow-[0_12px_30px_rgba(0,0,0,0.95)]">
-            </a>
-        </div>
-    </header>
-
-    <!-- HERO SECTION (2 COLUNAS EXPANSIVAS: TEXTO À ESQUERDA | VSL GIGANTE +35% À DIREITA) -->
-    <section class="relative pt-4 pb-16 lg:pt-8 lg:pb-24 overflow-hidden bg-onyx-950">
-        <!-- Imagem de Fundo com Overlay Equilibrado (Foto do Especialista Visível + Contraste Perfeito para o Texto) -->
+    <!-- HERO SECTION (INTEGRADA DE PONTA A PONTA COM CABEÇALHO, SEM NENHUM CORTE OU FAIXA PRETA) -->
+    <section class="relative pt-6 pb-16 lg:pt-8 lg:pb-24 overflow-hidden bg-onyx-950">
+        <!-- Imagem de Fundo Contínua (Sem cortes ou faixas pretas) -->
         <div class="absolute inset-0 z-0 pointer-events-none overflow-hidden">
-            <img src="assets/hero_bg_especialista_novo.webp" alt="Ambiente Premier Brand Sports" class="w-full h-full object-cover object-center opacity-60 sm:opacity-65 brightness-100">
-            <!-- Overlay Direcional: Escurece com precisão o lado do texto e deixa o resto da foto nítida e visível -->
-            <div class="absolute inset-0 bg-gradient-to-r from-onyx-950 via-onyx-950/75 to-onyx-950/40"></div>
-            <!-- Transição suave apenas nas extremidades (topo e base) -->
-            <div class="absolute inset-0 bg-gradient-to-b from-onyx-950/60 via-transparent to-onyx-950"></div>
+            <!-- Mobile: Foto vertical enquadrada mostrando o especialista e as camisas ao redor com nitidez -->
+            <img src="assets/hero_bg_mobile_oficial.webp" alt="Especialista e Camisas Premier Brand Sports" class="block lg:hidden w-full h-full object-cover object-top opacity-80 brightness-100">
+            <!-- Desktop: Foto landscape aberta perfeita para telas largas (mantida como aprovada) -->
+            <img src="assets/hero_bg_especialista_novo.webp" alt="Ambiente Premier Brand Sports" class="hidden lg:block w-full h-full object-cover object-center opacity-70 brightness-100">
+            
+            <!-- Overlay Mobile: Protege a leitura da headline sem esconder as camisas ao redor -->
+            <div class="block lg:hidden absolute inset-0 bg-gradient-to-b from-onyx-950/40 via-onyx-950/70 to-onyx-950"></div>
+            <!-- Overlay Desktop: Escurece suavemente a esquerda para dar contraste ao texto -->
+            <div class="hidden lg:block absolute inset-0 bg-gradient-to-r from-onyx-950 via-onyx-950/80 to-transparent"></div>
+            <!-- Transição suave exclusivamente no rodapé para conectar com a próxima seção -->
+            <div class="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-onyx-950 to-transparent"></div>
         </div>
 
         <!-- Glows de Fundo Sutis -->
         <div class="absolute top-1/4 left-10 w-[500px] h-[300px] bg-emerald-500/10 blur-[130px] rounded-full pointer-events-none"></div>
         <div class="absolute top-1/3 right-10 w-[600px] h-[380px] bg-gold-500/10 blur-[140px] rounded-full pointer-events-none"></div>
+
+        <!-- CABEÇALHO / LOGO (INTEGRADO NO TOPO DA HERO, NATURAL E SEM FAIXA PRETA) -->
+        <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 relative z-20 w-full mb-6 lg:mb-10 flex items-center justify-center lg:justify-start">
+            <a href="#" class="block transition-transform duration-300 hover:scale-105">
+                <img src="assets/logo_premier.png" alt="Premier Brand Sports Logo" class="h-[90px] sm:h-[110px] lg:h-[125px] w-auto object-contain drop-shadow-[0_12px_30px_rgba(0,0,0,0.95)]">
+            </a>
+        </div>
 
         <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
